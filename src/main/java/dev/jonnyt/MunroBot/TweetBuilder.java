@@ -18,6 +18,26 @@ public class TweetBuilder {
     String clientSecret = System.getenv("client-secret");
 
     public TweetBuilder() throws Exception {
+
+        /*
+        pick a walk
+            - scraped from here, https://www.walkhighlands.co.uk/Forum/find-a-walk.php#result
+            - need to tick sumits: munro radio box
+
+        get first paragraph
+        get distance, time, ascent
+        get weather at 0900, 1200, 1500
+            9AM: feels like x°C, y chance of rain, gusts of z
+            12PM: feels like x°C, y chance of rain, gusts of z, k chance of snow
+            3PM: feels like x°C, y chance of rain, gusts of z,
+
+        get walkhighlands link
+        get weather link
+
+        sunrise and sunset time??
+        useful: https://munroapi.herokuapp.com/munros
+        */
+
         client = new OkHttpClient();
         // TODO: pick walk via web scraping
         String url = "from above";
